@@ -25,7 +25,7 @@ pipeline {
     stage('Step1') {
             steps {
                 echo " ============== Build and push =================="
-                sh 'docker build -t lendy123/cloudproject:version${BUILD_NUMBER} -f /path/to/Dockerfile .'
+                sh 'docker build -t lendy123/cloudproject:version${BUILD_NUMBER} .'
                 sh 'docker push lendy123/cloudproject:version${BUILD_NUMBER}'
                 
             }
